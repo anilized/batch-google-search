@@ -1,4 +1,4 @@
-# 1) Gerekli paket (HEAD/GET için):
+# 1) Gerekli paket:
 py -m pip install requests
 
 # 2) Örnek CSV oluşturun (noktalı virgül ile):
