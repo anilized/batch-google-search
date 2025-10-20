@@ -4,8 +4,9 @@ py -m pip install requests
 # 2) Örnek CSV oluşturun (noktalı virgül ile):
 test1;test2
 
-# 3) Arka planda calistirmak icin:
-py .\search_requests_batch_windows.py .\queries.csv --method HEAD -t 10 -d 1.5 --per-query-delay 3
+# Her sorguyu 10 kez çalıştır, tekrarlar arası 1.5 sn bekle (BACKGROUND)
+py .\batch_search.py .\queries.csv -t 10 -d 1.5 --per-query-delay 3 --method HEAD
 
-# 4) Tarayici acarak calistirmak icin:
-py .\search_requests_batch_windows.py .\queries.csv --method BROWSER -t 3 -d 1.2
+# Her sorgu 10 kez calistir, tekrarlar arası 1.5 sn bekle (BROWSER)
+py .\batch_search.py .\queries.csv -t 10 -d 1.5 --per-query-delay 3 --method BROWSER
+
