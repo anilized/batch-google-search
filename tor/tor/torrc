@@ -1,0 +1,6 @@
+SocksPort 9050
+ControlPort 9051
+CookieAuthentication 1
+CookieAuthFileGroupReadable 1
+DataDirectory C:\tor\tor\data
+Log notice stdout
